@@ -6,7 +6,7 @@ import streamlit as st
 # Load data
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date",
                  "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("dashboard/all_data.csv")
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
@@ -19,7 +19,7 @@ with st.sidebar:
     st.title("MUHAMMAD RAFI ILHAM")
 
     # My Photo
-    st.image("e-commerce.jpeg")
+    st.image("dashboard/e-commerce.jpeg")
 
 # Main
 main_df = all_df
